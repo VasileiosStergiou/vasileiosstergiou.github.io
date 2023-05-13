@@ -11,10 +11,6 @@
   .star-rating::before {
     content: "\2605\2605\2605\2605\2605";
   }
-
-  .star-rating:hover {
-    font-size: 35px;
-  }
   
   /* Style the stars to be empty by default */
   .star-rating[data-rating="4"]::before {
