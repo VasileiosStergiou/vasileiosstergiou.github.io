@@ -37,6 +37,7 @@
 }
 
 .dropdown-content a:hover {
+    transition: 1s;
     display: block;
     box-shadow: 0 0 700px 10px #4907b4;
     text-shadow: rgb(32, 25, 12) 0 0 15px;
