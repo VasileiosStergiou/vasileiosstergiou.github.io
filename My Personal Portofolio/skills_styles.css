@@ -62,11 +62,11 @@
 }
 
 .softskills{
-    font-size: 22px;
+    font-size: 25px;
     margin-bottom: 60px;
     margin-right: -20px;
 }
-
+  
 .jobskills:hover{
     border-style:inherit;
     font-size: 30px;

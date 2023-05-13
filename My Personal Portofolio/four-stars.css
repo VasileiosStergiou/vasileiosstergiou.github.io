@@ -1,0 +1,33 @@
+/* Create a container for the star rating */
+.star-rating {
+    display: inline-block;
+    font-size: 20px;
+    unicode-bidi:isolate;
+    color: #5f1041; /* Optional: Set the color of the stars */
+    padding-left: 7px;
+  }
+  
+  /* Create the stars using Unicode characters */
+  .star-rating::before {
+    content: "\2605\2605\2605\2605\2605";
+  }
+  
+  /* Style the stars to be empty by default */
+  .star-rating[data-rating="4"]::before {
+    content: "\2605\2605\2605\2605\2606";
+  }
+  
+  /* Style the stars to be empty by default */
+  .star-rating[data-rating="3"]::before {
+    content: "\2605\2605\2605\2606\2606";
+  }
+  
+  /* Style the stars to be empty by default */
+  .star-rating[data-rating="2"]::before {
+    content: "\2605\2605\2606\2606\2606";
+  }
+  
+  /* Style the stars to be empty by default */
+  .star-rating[data-rating="1"]::before {
+    content: "\2605\2606\2606\2606\2606";
+  }
