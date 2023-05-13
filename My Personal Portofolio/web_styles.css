@@ -4,16 +4,19 @@ img{
     height: 300px;
     width: 300px;
     border-radius: 100px;
+    top: 10px;
 }
 body{
     background: linear-gradient(0.75turn, #90d5ec 0%, #fc575e 74%);
+    overflow-x: hidden;
+    overflow-y:scroll;
 }
 .profile{
     display:grid;
     font-size: 22px;
     margin-left: 390px;
     margin-right: 20px;
-    margin-top: -280px;
+    margin-top: -220px;
     margin-bottom: 60px;
 }
 
@@ -33,7 +36,9 @@ body{
 }
 
 img:hover{
+    transition: 1.2s;
     border-radius: 15px;
     transform: scale(1.2);
-    margin-left: 45px;
+    margin-top: 25px;
+    margin-left: 25px;
 }
