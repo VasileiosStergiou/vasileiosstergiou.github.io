@@ -1,0 +1,83 @@
+.text-field{
+    width: 700px;
+    height: 400px;
+    margin-top: 10px;
+    margin-left: 150px;
+    border-radius: 25px;
+    border-style:inherit;
+    border-radius: 10px;
+}
+
+.first-name{
+    border-style: none;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 150px;
+    border-radius: 25px;
+}
+
+.last-name{
+    border-style: none;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 25px;
+}
+
+.phone-number{
+    border-style: none;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 25px;
+}
+
+.textfield-description{
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.text-field:hover{
+    transition: 1.5s;    
+}
+
+.first-name:hover{
+    font-size: 25px;
+    transition: 0.7s;
+    box-shadow: 0 0 700px 10px #4907b4;
+    border-image: linear-gradient(25deg, purple, orange) 0.75;
+    border-style:inherit;
+}
+
+.last-name:hover{
+    font-size: 25px;
+    transition: 0.7s;
+    box-shadow: 0 0 700px 10px #4907b4;
+    border-image: linear-gradient(25deg, purple, orange) 0.75;
+    border-style:inherit;
+}
+
+.phone-number:hover{
+    font-size: 25px;
+    transition: 0.7s;
+    box-shadow: 0 0 700px 10px #4907b4;
+    border-image: linear-gradient(25deg, purple, orange) 0.75;
+    border-style:inherit;
+}
+
+.contact-space:hover{
+    border-style:inherit;
+    font-size: 30px;
+    background:linear-gradient(0.25turn, #3f87a6, #f7f8f6, #f69d3c 100%);
+    text-shadow: rgb(32, 25, 12) 0 0 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 700px 10px #4907b4;
+    opacity: 0.8;
+    transition: 1.5s;
+}
