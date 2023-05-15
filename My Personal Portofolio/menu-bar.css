@@ -24,6 +24,7 @@
 .topnav a:hover{
     transition: 0.7s;
     border-radius: 35px;
+    font-size: 30px;
     text-shadow: rgb(65, 23, 165) 0 0 15px;
     background: linear-gradient(to right, #513ad6, #a7301b);
 }

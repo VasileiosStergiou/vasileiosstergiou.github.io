@@ -25,16 +25,17 @@ body{
     margin-bottom: 60px;
 }
 
-.profile:hover{
+.container:hover .profile{
     border-style:inherit;
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     border-radius: 10px;
     background:linear-gradient(0.25turn, #3f87a6, #f7f8f6, #f69d3c 100%);
     border-image: linear-gradient(25deg, rgb(12, 61, 16), orange) 0.75;
     text-shadow: rgb(32, 25, 12) 0 0 15px;
     margin-left: 350px;
     margin-right: 40px;
+    margin-bottom: 80px;
     box-shadow: 0 0 700px 10px #4907b4;
     opacity: 0.8;
     transition: 1.5s;

@@ -18,14 +18,9 @@
     margin-top: 10px;
     margin-bottom: 50px;
     margin-left: 350px;
-    border-radius: 20px;
     background:#07b410;
-}
-
-.submit-button:hover{
-    transition: 0.7s;
     font-size: 25px;
-    color: rgb(209, 219, 209);
+    color: rgb(255, 255, 255);
     border-radius: 45px;
 }
 
@@ -44,6 +39,25 @@ input[type="text"] {
     margin-top: 10px;
     margin-left: 150px;
     border-radius: 20px;
+}
+
+.subject {
+    border-style: none;
+    text-align: center;
+    width: 350px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 150px;
+    border-radius: 20px;
+}
+
+.subject:hover{
+    font-size: 35px;
+    transition: 0.7s;
+    box-shadow: 0 0 700px 10px #4907b4;
+    border-image: linear-gradient(25deg, purple, orange) 0.75;
+    border-style:inherit;
+    border-radius: 45px;
 }
 
 .last-name{
@@ -98,7 +112,7 @@ input[type="text"] {
     border-radius: 45px;
 }
 
-.contact-space:hover{
+.container:hover #contact{
     border-style:inherit;
     font-size: 35px;
     background:linear-gradient(0.25turn, #3f87a6, #f7f8f6, #f69d3c 100%);
@@ -109,6 +123,6 @@ input[type="text"] {
     transition: 1.5s;
     margin-right: 5%;
     margin-left: 150px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     border-radius: 45px;
 }

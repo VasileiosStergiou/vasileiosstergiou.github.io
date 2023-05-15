@@ -50,7 +50,14 @@
 }
 
 .jobskills{
-    font-size: 22px;
+    font-size: 30px;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    margin-right: -20px;
+}
+
+.softskills{
+    font-size: 30px;
     margin-bottom: 60px;
     margin-right: -20px;
 }
@@ -62,30 +69,9 @@
     padding: 15px 200px;
 }
 
-.softskills{
-    font-size: 25px;
-    margin-bottom: 60px;
-    margin-right: -20px;
-}
-  
-.jobskills:hover{
+.container:hover  .jobskills, .container:hover .softskills {
     border-style:inherit;
-    font-size: 30px;
-    background:linear-gradient(0.25turn, #3f87a6, #f7f8f6, #f69d3c 100%);
-    text-shadow: rgb(32, 25, 12) 0 0 15px;
-    border-radius: 10px;
-    margin-top: 10%;
-    margin-right: 10%;
-    margin-left: 150px;
-    margin-bottom: 50px;
-    box-shadow: 0 0 700px 10px #4907b4;
-    opacity: 0.8;
-    transition: 1.5s;
-}
-
-.softskills:hover{
-    border-style:inherit;
-    font-size: 30px;
+    font-size: 32px;
     background:linear-gradient(0.25turn, #3f87a6, #f7f8f6, #f69d3c 100%);
     border-image: linear-gradient(25deg, purple, orange) 0.75;
     text-shadow: rgb(32, 25, 12) 0 0 15px;
