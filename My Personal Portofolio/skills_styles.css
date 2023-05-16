@@ -63,10 +63,14 @@
 }
 
 .languages{
-    list-style-type:disc;
+    list-style-type:none;
     font-size: 30px;
-    text-align:initial;
+    text-align:center;
     padding: 15px 200px;
+}
+
+.softskills-list{
+    list-style-type:none;
 }
 
 .container:hover  .jobskills, .container:hover .softskills {
