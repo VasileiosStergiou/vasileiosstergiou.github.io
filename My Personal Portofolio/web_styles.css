@@ -12,6 +12,8 @@ html {
 }
 
 body{
+    max-width: 1920px;
+    max-height: 1080px;
     background: linear-gradient(0.75turn, #90d5ec 0%, #fc575e 74%);
     overflow-x: hidden;
     overflow-y:scroll;
