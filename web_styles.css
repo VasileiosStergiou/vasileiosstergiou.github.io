@@ -1,0 +1,57 @@
+img{
+    margin-top: 10px;
+    margin-bottom: -20px;
+    height: 300px;
+    width: 300px;
+    border-radius: 100px;
+    top: 10px;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body{
+    /*
+    max-width: 1920px;
+    max-height: 1080px;
+    */
+    background: linear-gradient(0.75turn, #90d5ec 0%, #fc575e 74%);
+    overflow-x: hidden;
+    overflow-y:scroll;
+}
+
+.profile{
+    display:grid;
+    font-size: 22px;
+    margin-left: 390px;
+    margin-right: 20px;
+    margin-top: -220px;
+    margin-bottom: 60px;
+}
+
+.container:hover .profile{
+    border-style:inherit;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 10px;
+    background:linear-gradient(0.25turn, #3f87a6, #f7f8f6, #f69d3c 100%);
+    border-image: linear-gradient(25deg, rgb(12, 61, 16), orange) 0.75;
+    text-shadow: rgb(32, 25, 12) 0 0 15px;
+    margin-left: 350px;
+    margin-right: 40px;
+    margin-bottom: 80px;
+    box-shadow: 0 0 700px 10px #4907b4;
+    opacity: 0.8;
+    transition: 1.5s;
+}
+
+img:hover{
+    transition: 1.2s;
+    border-radius: 15px;
+    transform: scale(1.2);
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}

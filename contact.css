@@ -1,0 +1,135 @@
+.text-field {
+    width: 700px;
+    height: 400px;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border-style:inherit;
+    border-radius: 10px;
+    font-size: 25px;
+    position: relative;
+}
+
+.submit-button {
+    border-style: none;
+    text-align: center;
+    width: 250px;
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    background:#07b410;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    border-radius: 45px;
+}
+
+input[type="text"] {
+    text-align: left;
+    vertical-align: top;
+    padding-top: 0px;
+    padding-left: 0px;
+}
+
+.first-name{
+    border-style: none;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 150px;
+    border-radius: 20px;
+}
+
+.subject {
+    border-style: none;
+    text-align: center;
+    width: 350px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: -5px;
+    border-radius: 20px;
+}
+
+.subject:hover{
+    font-size: 35px;
+    transition: 0.7s;
+    box-shadow: 0 0 700px 10px #4907b4;
+    border-image: linear-gradient(25deg, purple, orange) 0.75;
+    border-radius: 45px;
+}
+
+.last-name{
+    border-style: none;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.email{
+    border-style: none;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 25px;
+}
+/* 
+@media only screen and (max-width: 1280px) {
+    .container{
+        width: 100%;
+        padding: 10px;
+    }
+} */
+
+.textfield-description{
+    font-size: 35px;
+    margin-top: 50px;
+}
+
+.first-name:hover{
+    font-size: 35px;
+    transition: 0.7s;
+    box-shadow: 0 0 700px 10px #4907b4;
+    border-image: linear-gradient(25deg, purple, orange) 0.75;
+    border-style:inherit;
+    border-radius: 45px;
+}
+
+.last-name:hover{
+    font-size: 35px;
+    transition: 0.7s;
+    box-shadow: 0 0 700px 10px #4907b4;
+    border-image: linear-gradient(25deg, purple, orange) 0.75;
+    border-style:inherit;
+    border-radius: 45px;
+}
+
+.email:hover{
+    font-size: 35px;
+    transition: 0.7s;
+    box-shadow: 0 0 700px 10px #4907b4;
+    border-image: linear-gradient(25deg, purple, orange) 0.75;
+    border-style:inherit;
+    border-radius: 45px;
+}
+
+.container:hover #contact{
+    border-style:inherit;
+    font-size: 35px;
+    background:linear-gradient(0.25turn, #3f87a6, #f7f8f6, #f69d3c 100%);
+    text-shadow: rgb(32, 25, 12) 0 0 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 700px 10px #4907b4;
+    opacity: 0.8;
+    transition: 1.5s;
+    margin-right: 5%;
+    margin-left: 150px;
+    margin-bottom: 150px;
+    border-radius: 45px;
+}
