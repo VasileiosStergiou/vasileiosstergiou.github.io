@@ -8,23 +8,22 @@
   }
   
   /* Styles for mobile screens */
-  @media only screen and (max-width: 767px) {
-
+  @media screen and (max-width: 767px) {
     body {
       margin: 0;
       padding: 0;
     }
 
     .container {
-      width: 100%;
-      padding: 10px;
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
       position: static;
     }
 
     .contact-space{
-        width: 10%;
-        padding: 10px;
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
       }
   }
