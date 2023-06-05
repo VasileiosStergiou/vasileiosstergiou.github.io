@@ -78,17 +78,13 @@ input[type="text"] {
     margin-left: 10px;
     border-radius: 25px;
 }
-
+/* 
 @media only screen and (max-width: 1280px) {
-    /* Add CSS styles specific to mobile screens here */
-    /* Example:
-    */
     .container{
         width: 100%;
         padding: 10px;
-        margin-left: 10px;
     }
-}
+} */
 
 .textfield-description{
     font-size: 35px;
