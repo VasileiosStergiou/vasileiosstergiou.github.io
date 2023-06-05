@@ -21,15 +21,12 @@ body{
     overflow-y:scroll;
 }
 
-@media screen and (max-width: 800px) {
-    /* Add CSS styles specific to mobile screens here */
-    /* Example:
-    */
+/* @media screen and (max-width: 800px) {
     body{
         width: 100%;
         padding: 10px;
     }
-}
+} */
 
 .profile{
     display:grid;
