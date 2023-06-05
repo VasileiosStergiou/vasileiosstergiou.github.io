@@ -12,12 +12,26 @@ html {
 }
 
 body{
+    /*
     max-width: 1920px;
     max-height: 1080px;
+    */
     background: linear-gradient(0.75turn, #90d5ec 0%, #fc575e 74%);
     overflow-x: hidden;
     overflow-y:scroll;
 }
+
+@media only screen and (max-width: 1280px) {
+    /* Add CSS styles specific to mobile screens here */
+    /* Example:
+    */
+    body{
+        width: 100%;
+        padding: 10px;
+        margin-left: 10px;
+    }
+}
+
 .profile{
     display:grid;
     font-size: 22px;
@@ -50,3 +64,5 @@ img:hover{
     margin-top: 25px;
     margin-left: 25px;
 }
+
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}

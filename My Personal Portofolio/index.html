@@ -130,30 +130,33 @@
 
         <div class="container">
             <section id="contact">
-                <div class="contact-space" align = "center">
-                    <h2 align="center">Contact & Feedback</h2>
-                    <p align = "center" class="textfield-description">
-                        You can send me some feedback through the text field bellow.
-                        <br>Optional:You can send it without using your personal data.
-                    </p>
-                    <link rel="stylesheet" href="contact.css">
-        
-                    <div class="person-info">
-                        <input type="text" name="name" placeholder="First Name" class="first-name">
-                        <input type="text"  name="name" placeholder="Last Name" class="last-name">
-                        <input type="text" name="name" placeholder="Email" class="email">
+                <form action="send_email.php" method="post">
+                    <div class="contact-space" align = "center">
+                        <h2 align="center">Contact & Feedback</h2>
+                        <p align = "center" class="textfield-description">
+                            You can send me some feedback through the text field bellow.
+                            <br>Optional:You can send it without using your personal data.
+                        </p>
+                        <link rel="stylesheet" href="contact.css">
+                                    
+                        <div class="person-info">
+                            <input type="text" name="first-name" placeholder="First Name" class="first-name">
+                            <input type="text"  name="last-name" placeholder="Last Name" class="last-name">
+                            <input type="text" name="subject" placeholder="Subject" class="subject">
+                        </div>
+                        
+                        <div class="contact-form">
+                            <textarea name="text-field" class="text-field"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-button">Submit</button>
                     </div>
-                    <input type="text" name="name" placeholder="Subject" class="subject">
-                    <div class="contact-form">
-                        <textarea class="text-field"></textarea>
-                    </div>
-    
-                    <button type="button" class="submit-button">Submit</button>
-                </div>
+                </form>
             </section>
         </div>
         
         <!--
+            
         <video width="720" height="480" controls>
             <source src="project-exibition.mp4" type="video/mp4">
             Your browser does not support the video tag.
