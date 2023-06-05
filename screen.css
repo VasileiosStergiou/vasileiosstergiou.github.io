@@ -1,7 +1,20 @@
- @media screen and (max-width: 800px) {
-    .container{
-        width: 100;
-        padding: 10px;
-        margin-left: 0;
+/* Styles for PC screens */
+@media only screen and (min-width: 768px) {
+    .container {
+      width: 960px;
+      margin: 0 auto;
     }
-}
+  }
+  
+  /* Styles for mobile screens */
+  @media only screen and (max-width: 767px) {
+    .container {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .contact-space{
+        box-sizing: border-box;
+      }
+  }

@@ -128,8 +128,9 @@ input[type="text"] {
     box-shadow: 0 0 700px 10px #4907b4;
     opacity: 0.8;
     transition: 1.5s;
-    margin-right: 5%;
+    /*
+    margin-right: 5%; 
     margin-left: 150px;
-    margin-bottom: 150px;
+    margin-bottom: 150px; */
     border-radius: 45px;
 }
