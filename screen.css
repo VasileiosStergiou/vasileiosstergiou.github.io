@@ -3,6 +3,7 @@
     .container {
       width: 960px;
       margin: 0 auto;
+      position: static;
     }
   }
   
@@ -12,9 +13,12 @@
       width: 100%;
       padding: 10px;
       box-sizing: border-box;
+      position: static;
     }
 
     .contact-space{
+        width: 10%;
+        padding: 10px;
         box-sizing: border-box;
       }
   }
