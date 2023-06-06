@@ -2,12 +2,14 @@
     background: linear-gradient(0.25turn, #672d7e, #68b819, #a76219 100%);
     overflow: hidden;
     font-size: 20px;
-    border-radius: 55px;
-    display: flex;
-    margin-left: 60px;
+    border-radius: 75px;
+    display:inline-flexbox;
+    margin-left: 65px;
     justify-content: center;
     width: 90%;
     top: 10px;
+    right: 10px;
+    left: 10px;
     position: fixed;
     z-index: 9999;
     max-width: 1920px;
@@ -19,8 +21,27 @@
     float: left;
     color: #f2f2f2;
     text-align: center;
+    text-shadow: rgb(19, 19, 18) 0 0 15px;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+.topnav{
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-shadow: rgb(19, 19, 18) 0 0 15px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-shadow: rgb(19, 19, 18) 0 0 15px;
+  padding: 14px 16px;
+  text-decoration: none;
 }
   
   /* Change the color of links on hover */
