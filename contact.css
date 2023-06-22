@@ -1,7 +1,7 @@
 .text-field {
     width: 700px;
     height: 400px;
-    margin-top: 10px;
+    margin-top: 50px;
     margin-left: 100px;
     margin-bottom: 10px;
     border-radius: 25px;
@@ -38,7 +38,7 @@ input[type="text"] {
     width: 200px;
     height: 50px;
     margin-top: 10px;
-    margin-left: 150px;
+    margin-left: 10px;
     border-radius: 20px;
 }
 
@@ -48,7 +48,8 @@ input[type="text"] {
     width: 350px;
     height: 50px;
     margin-top: 10px;
-    margin-left: -5px;
+    margin-left: 10px;
+    margin-right: 50px;
     border-radius: 20px;
 }
 
@@ -119,19 +120,16 @@ input[type="text"] {
     border-radius: 45px;
 }
 
-.container:hover #contact{
+.container #contact{
     border-style:inherit;
     font-size: 35px;
     background:linear-gradient(0.25turn, #3f87a6, #f7f8f6, #f69d3c 100%);
     text-shadow: rgb(32, 25, 12) 0 0 15px;
     border-radius: 10px;
-    box-shadow: 0 0 700px 10px #4907b4;
     opacity: 0.8;
     transition: 1.5s;
     margin-bottom: 100px;
-    /*
-    margin-right: 5%; 
-    margin-left: 150px;
-    margin-bottom: 150px; */
+    margin-left: 50px;
+    margin-right: 50px;
     border-radius: 45px;
 }
