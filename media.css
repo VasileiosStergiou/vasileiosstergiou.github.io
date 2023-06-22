@@ -1,9 +1,9 @@
-.dropdown {
+.dropdown-media {
   position:fixed;
   display: inline-block;
 }
 
-.dropdown-content {
+.content-media {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -13,13 +13,13 @@
   background: linear-gradient(0.5turn, #672d7e, #68b819, #a76219 100%);
 }
 
-.dropdown-content a {
+.content-media a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-media:hover .content-media {
   display: block;
 }
