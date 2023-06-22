@@ -5,6 +5,7 @@
     border-radius: 75px;
     display:inline-flexbox;
     margin-left: 25px;
+    margin-right: 125px;
     justify-content: center;
     width: 90%;
     top: 10px;
@@ -12,8 +13,8 @@
     left: 10px;
     position: fixed;
     z-index: 9999;
-    max-width: 1920px;
-    max-height: 1080px;
+    /* max-width: 1920px;
+    max-height: 1080px; */
   }
   
   /* Style the links inside the navigation bar */
