@@ -1,8 +1,8 @@
 .text-field {
     width: 700px;
-    height: 400px;
+    height: 600px;
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 45px;
     margin-bottom: 10px;
     border-radius: 25px;
     border-style:inherit;
@@ -45,7 +45,7 @@ input[type="text"] {
 .subject {
     border-style: none;
     text-align: center;
-    width: 350px;
+    width: 200px;
     height: 50px;
     margin-top: 10px;
     margin-left: 10px;
