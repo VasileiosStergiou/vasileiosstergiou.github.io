@@ -1,25 +1,22 @@
 .topnav {
-    background: linear-gradient(0.25turn, #672d7e, #68b819, #a76219 100%);
+    background:rgb(5, 63, 114);
     overflow: hidden;
-    font-size: 20px;
-    border-radius: 75px;
-    display:inline-flexbox;
-    margin-left: 25px;
-    margin-right: 125px;
-    justify-content: center;
-    width: 90%;
-    top: 10px;
-    right: 10px;
-    left: 10px;
+    font-size: 25px;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: 35px;
     position: fixed;
     z-index: 9999;
+    display: inline-flex; /* Add this line */
+    justify-content: center; 
+    height: 80px;/* Center the content horizontally */
     /* max-width: 1920px;
     max-height: 1080px; */
   }
   
   /* Style the links inside the navigation bar */
 .topnav a {
-    float: left;
     color: #f2f2f2;
     text-align: center;
     text-shadow: rgb(19, 19, 18) 0 0 15px;
@@ -27,6 +24,7 @@
     text-decoration: none;
 }
 
+/* Style the links inside the navigation bar 
 .topnav{
   float: left;
   color: #f2f2f2;
@@ -35,10 +33,10 @@
   padding: 14px 16px;
   text-decoration: none;
   text-align: center;
-}
+} */
 
 .home-content{
-  display: inline-block;
+  display: inline-flex;
 }
 
 .dropdown {
@@ -53,8 +51,5 @@
   /* Change the color of links on hover */
 .topnav a:hover{
     transition: 0.7s;
-    border-radius: 35px;
-    font-size: 30px;
-    text-shadow: rgb(65, 23, 165) 0 0 15px;
-    background: linear-gradient(to right, #513ad6, #a7301b);
+    color: #e78924;
 }
