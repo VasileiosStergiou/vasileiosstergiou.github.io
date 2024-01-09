@@ -1,0 +1,32 @@
+footer {
+    background-color:rgb(5, 63, 114); /* Adjust the background color as needed */
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 1px;
+    position: static;
+    width: 100%;
+    top: 5%;
+    bottom: 10;
+    left: 0;
+    right: 0;
+}
+
+/* Additional styling for links in the footer, adjust as needed */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    display:inline-flex;
+}
+
+p {
+    display: inline-block;
+}
+
+.flag {
+    margin-left: 50px;
+    font-size: 50px;
+}
+
+.flag:hover {
+    transform: scale(2.0);
+}

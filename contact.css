@@ -1,13 +1,13 @@
 .text-field {
-    width: 700px;
-    height: 600px;
+    width: 1300px;
+    height: 800px;
     margin-top: 50px;
     margin-left: 45px;
     margin-bottom: 10px;
     border-radius: 25px;
     border-style:inherit;
     border-radius: 10px;
-    font-size: 25px;
+    font-size: 45px;
     position: relative;
 }
 
@@ -15,8 +15,8 @@
     border-style: none;
     text-align: center;
     width: 250px;
-    height: 70px;
-    margin-top: 10px;
+    height: 100px;
+    margin-top: 40px;
     margin-bottom: 50px;
     margin-left: 50px;
     background:#07b410;
@@ -35,8 +35,9 @@ input[type="text"] {
 .first-name{
     border-style: none;
     text-align: center;
+    font-size: 35px;
     width: 200px;
-    height: 50px;
+    height: 80px;
     margin-top: 10px;
     margin-left: 10px;
     border-radius: 20px;
@@ -45,8 +46,9 @@ input[type="text"] {
 .subject {
     border-style: none;
     text-align: center;
+    font-size: 35px;
     width: 200px;
-    height: 50px;
+    height: 80px;;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 50px;
@@ -54,7 +56,6 @@ input[type="text"] {
 }
 
 .subject:hover{
-    font-size: 35px;
     transition: 0.7s;
     box-shadow: 0 0 700px 10px #4907b4;
     border-image: linear-gradient(25deg, purple, orange) 0.75;
@@ -64,16 +65,22 @@ input[type="text"] {
 .last-name{
     border-style: none;
     text-align: center;
+    font-size: 35px;
     width: 200px;
-    height: 50px;
+    height: 80px;;
     margin-top: 10px;
     margin-left: 10px;
     border-radius: 20px;
 }
 
+.person-info{
+    display: inline;
+}
+
 .email{
     border-style: none;
     text-align: center;
+    font-size: 35px;
     width: 200px;
     height: 50px;
     margin-top: 10px;
@@ -94,7 +101,6 @@ input[type="text"] {
 }
 
 .first-name:hover{
-    font-size: 35px;
     transition: 0.7s;
     box-shadow: 0 0 700px 10px #4907b4;
     border-image: linear-gradient(25deg, purple, orange) 0.75;
@@ -103,7 +109,6 @@ input[type="text"] {
 }
 
 .last-name:hover{
-    font-size: 35px;
     transition: 0.7s;
     box-shadow: 0 0 700px 10px #4907b4;
     border-image: linear-gradient(25deg, purple, orange) 0.75;
@@ -112,7 +117,6 @@ input[type="text"] {
 }
 
 .email:hover{
-    font-size: 35px;
     transition: 0.7s;
     box-shadow: 0 0 700px 10px #4907b4;
     border-image: linear-gradient(25deg, purple, orange) 0.75;
@@ -123,13 +127,14 @@ input[type="text"] {
 .container #contact{
     border-style:inherit;
     font-size: 35px;
-    background:linear-gradient(0.25turn, #3f87a6, #f7f8f6, #f69d3c 100%);
+    color:#f7f8f6;
     text-shadow: rgb(32, 25, 12) 0 0 15px;
     border-radius: 10px;
     opacity: 0.8;
     transition: 1.5s;
-    margin-bottom: 100px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     border-radius: 45px;
 }
