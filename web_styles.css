@@ -1,7 +1,6 @@
 img{
     margin-top: 160px;
     margin-bottom: -20px;
-    margin-left: 70px;
     height: 400px;
     width: 400px;
     border-radius: 45%;
@@ -18,25 +17,44 @@ body{
     max-width: 1920px;
     max-height: 1080px;
     background: linear-gradient(0.75turn, #90d5ec 0%, #fc575e 74%);
+    background-image: url('img_girl.jpg');
     */
+    background:rgb(28, 27, 27); /* Replace 'your-image-url.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
     border-style:inherit;
     overflow-x: hidden;
     overflow-y:scroll;
+    margin: 0;
+    padding: 0;
+}
+
+.day-mode {
+    /* Day mode styles */
+    color: #4f0d0d; /* Example: change text color for day mode */
+}
+
+h1{
+    color:#f7f8f6;
 }
 
 .profile{
-    border-style:inherit;
     text-align: center;
     font-size: 30px;
     border-radius: 10px;
     top: 10px;
-    background:linear-gradient(0.25turn, #3f87a6, #f7f8f6, #f69d3c 100%);
-    border-image: linear-gradient(25deg, rgb(12, 61, 16), orange) 0.75;
-    text-shadow: rgb(32, 25, 12) 0 0 15px;
-    margin-left: 30px;
-    margin-right: 40px;
-    margin-bottom: 50px;
-    margin-top: 180px;
-    opacity: 0.8;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 100px;
+    /*opacity: 0.8;*/
     transition: 1.5s;
+}
+
+.text-content {
+    opacity: 0.8; /* Set the opacity for the text content only */
+    border-image: linear-gradient(25deg, rgb(12, 61, 16), orange) 0.75;
+    text-shadow: rgb(32, 25, 12);
+    padding: 20px;
 }

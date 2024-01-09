@@ -3,35 +3,59 @@
     margin-right: 10px;
   }
 
-.jobskills{
+.jobskills,p{
     border-style:inherit;
     font-size: 32px;
-    background:linear-gradient(0.25turn, #3f87a6, #f7f8f6, #f69d3c 100%);
+    color:#f7f8f6;
     border-image: linear-gradient(25deg, purple, orange) 0.75;
     text-shadow: rgb(32, 25, 12) 0 0 15px;
     border-radius: 10px;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
     opacity: 0.8;
     transition: 1.5s;
 }
 
+.icon{
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.icon:hover{
+    transform: scale(2.5);
+}
+
+.language,.skill{
+    display: inline-flex;
+    margin-top: -110px;
+    margin-bottom: 0px;
+}
+
+.star-rating{
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+
 .softskills{
     border-style:inherit;
     font-size: 32px;
-    background:linear-gradient(0.25turn, #3f87a6, #f7f8f6, #f69d3c 100%);
-    border-image: linear-gradient(25deg, purple, orange) 0.75;
+    color:#f7f8f6;
     text-shadow: rgb(32, 25, 12) 0 0 15px;
     border-radius: 10px;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
     opacity: 0.8;
     transition: 1.5s;
 }
 
 .languages{
+    display: inline-flex;
+    margin-top: -100px;
     list-style-type:none;
     font-size: 30px;
     text-align:center;
