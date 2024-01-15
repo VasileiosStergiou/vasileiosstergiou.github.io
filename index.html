@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="video.css">
         <link rel="stylesheet" href="menu-bar.css">
         <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="timeline.css">
         <!--<link rel="stylesheet" href="screen.css">-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,13 +19,14 @@
 
     <body>
         <meta charset="UTF-8">
-        <div class="topnav">
+        <div class="topnav" id ="topnav">
             <div class="home-content">
                 <a href="#about" >❓ About</a>
                 <a href="https://github.com/VasileiosStergiou" target="_blank">💼 Visit my GitHub</a>
                 <a href="mailto:vasileiosstergiou99@gmail.com?subject = Feedback&body = Message" target="_blank"> 📩 Email Me</a>
                 <a href="#contact"> 📞 Contact & Feedback</a>
                 <a href="CV.pdf" target="_blank" download> 📄 Download my CV</a>
+
             </div>
         </div>
 
@@ -48,6 +50,47 @@
                 </div>
             </section>
         </div>
+        <hr></hr>
+
+        <div class="timeline">
+            <h1>Education</h1>
+            <hr></hr>
+            <div class="event">
+                <div class="event-content">
+                    <p class="date">2011 - 2014</p>
+                    <p>Zosimea Experimentary High School, Ioannina</p>
+                </div>
+            </div>
+            <hr></hr>
+            <div class="event">
+                <div class="event-content">
+                    <p class="date">2014 - 2017</p>
+                    <p>General Lyceum of Anatoli, Ioannina</p>
+                    <div class="event">
+                        <div class="event-content">
+                            <p class="date">2016</p>
+                            <p>Member of Hellenic Youth Parliament project, Athens</p>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            <hr></hr>
+
+            <div class="event">
+                <div class="event-content">
+                    <p class="date">2017 - 2023</p>
+                    <p>Department of Computer Science and Engineering, University of Ioannina
+                    </p>
+                    <div class="event">
+                        <div class="event-content">
+                            <p class="date">2022</p>
+                            <p>Intership at NIKI Ltd. Companny, Ioannina</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <hr></hr>
 
@@ -55,68 +98,114 @@
             <div class="description" align="center">
                 <div class="jobskills">
                     <h2 align="Center">Job Skills
+                        <button class="jobskills-button" onclick="showJobskils()">Show Job Skills</button>
                     </h2>
                     <p>
                         The Job Skills i possess include the programming languages
                         <br>that i am able to work with and their respective mastery level, as well.
                         <br>
+                        My main experience is in academic level, as there is no previous working experience, thus far.
                     </p>
-                    <ul class="languages">
-                        <div class="language">
+                    <ul class="languages" id="languages">
+                        <div class="language" id = "language-0">
                             <li>
                                 <img src="python.png" alt="Python Icon" class="icon"> 
                                 Python
                                 <span class="star-rating" data-rating="4"></span>
+
+                                <div class="jobskill-description" id="python">
+                                    Python is the main programming language i am aquainted with, in which i have
+                                    experience in using Data Science libraries, such as Pandas, in my two-month internship at 
+                                    NIKI Ltd. Company and Image processing libraries (Opencv, Pytorch, Tensorflow) for my Diploma Thesis.
+                                    <br>PyCharm consists of the main Python-oriented editor i have used, in my internship.
+                                </div>
                             </li>
                         </div>
 
-                        <div class="language">
+                        <div class="language" id = "language-1">
                             <li>
                                 <img src="java.png" alt="Python Icon" class="icon"> 
                                 Java
                                 <span class="star-rating" data-rating="4"></span>
+                                <div class="jobskill-description" id="java">
+                                    Java is my second most used programming language, mainly experienced in Eclipse editor in terms of software development,
+                                    along with Swing, JavaFX for GUI development and refactoring projects,in academic level.
+                                    <br>Academic level projects, such as a  simple Neural Network and K-means algorithm, were also implemented in Java language. 
+                                </div>
                             </li>
                         </div>
 
-                        <div class="language">
+                        <div class="language" id = "language-2">
                             <li>
                                 <img src="octave.png" alt="Python Icon" class="icon">
                                 Octave 
                                 <span class="star-rating" data-rating="4"></span>
+                                <div class="jobskill-description" id="octave">
+                                    My experience in Octave includes mainly Signal processing and Image processing, in academic courses.
                             </li>
                         </div>
 
-                        <div class="language">
+                        <div class="language" id = "language-3">
                             <li>
                                 <img src="c.png" alt="Python Icon" class="icon">
                                 C  
                                 <span class="star-rating" data-rating="3"></span>
+                                <div class="jobskill-description" id="C">
+                                    My experience with C language mainly focuses on academic level projects on Opeerating Systems,
+                                    on the implementation of multi-threaded Readers-Writers algorithm on a given database and a Journal backlog on
+                                    Minix. 
+                                </div>
                             </li>
                         </div>
 
-                        <div class="language">
+                        <div class="language" id = "language-4">
                             <li>
                                 <img src="cpp.png" alt="Python Icon" class="icon">
                                 C++   
                                 <span class="star-rating" data-rating="3"></span>
+                                <div class="jobskill-description" id="cpp">
+                                    My experience in C++ language includes the use of OpenGL library, in order to
+                                    implement a simple project in Computer Graphics academic course.
+                                </div>
                             </li>
                         </div>
 
-                        <div class="language">
+                        <div class="language" id = "language-5">
                             <li>
                                 <img src="cs.png" alt="Python Icon" class="icon">
                                 C#  
                                 <span class="star-rating" data-rating="3"></span>
+                                <div class="jobskill-description" id="cs">
+                                    In the same way as my experience in C++ language, C# language experience was acquainted in the
+                                    form of Unity, in order to implement a simple project in Computer Graphics academic course.
+                                </div>
                             </li>
                         </div>
                         
-                        <div class="language">
+                        <div class="language" id = "language-6">
                             <li>
                                 <img src="sql.png" alt="Python Icon" class="icon">
                                 SQL 
                                 <span class="star-rating" data-rating="3"></span>
+                                <div class="jobskill-description" id="sql">
+                                    My experience in SQL, in academic level, includes academic projects
+                                    for data processing and filtering using MySQL and Python Connector library 
+                                    for further processing.
+                                </div>
                             </li>
                         </div>
+
+                        <script>
+                            function showJobskils() {
+                                var parentContainer = document.getElementById('languages');
+                                var nestedDivs = parentContainer.getElementsByClassName('language');
+                                var numberOfDivs = nestedDivs.length;
+                                Object.entries(nestedDivs).forEach(entry => {
+                                    const [key, value] = entry;
+                                    value.style.display = "inline-flex";
+                                }); 
+                            }
+                        </script>
                     </ul>
                 </div>
             </div>
@@ -126,14 +215,15 @@
 
         <div class="container">
             <div class="softskills" align="center">
-                <h2 align="center">Soft Skills</h2>
+                <h2 align="center">Soft Skills
+                    <button class="softskills-button" onclick="showSoftskils()">Show Soft Skills</button></h2>
                 <p align = "center">
                     The Soft skills that i possess are my qualities as a person,
                     specifically when i interact 
                     <br>with my colleagues and communicate with them 
                     <br>and my skills to organize my responsibities and deadlines.
                 </p>
-                <ul class="softskills-list" align = "center">
+                <ul class="softskills-list" id = "softskills-list" align = "center">
                     <div class="skill">
                         <li>
                             <img src="communication.png" alt="Python Icon" class="icon">
@@ -184,6 +274,18 @@
                             <span class="star-rating" data-rating="4"></span>
                         </li>
                     </div>
+
+                    <script>
+                        function showSoftskils() {
+                            var parentContainer = document.getElementById('softskills-list');
+                            var nestedDivs = parentContainer.getElementsByClassName('skill');
+                            var numberOfDivs = nestedDivs.length;
+                            Object.entries(nestedDivs).forEach(entry => {
+                                const [key, value] = entry;
+                                value.style.display = "inline-flex";
+                            }); 
+                        }
+                    </script>
                 </ul>
             </div>
         </div>
@@ -215,42 +317,71 @@
             </section>
         </div>
         <footer>
-            <a href="https://www.instagram.com/" target="_blank"><img src="instagram.png" alt="Instagram Icon" class="icon"></a>
-            <a href="https://www.facebook.com/" target="_blank"><img src="fb.png" alt="Facebook Icon" class="icon"></a>
+            <p>You can contact with me on social media</p>
+            <a href="mailto:vasileiosstergiou99@gmail.com?subject = Feedback&body = Message" target="_blank"><img src="gmail.png" alt="Instagram Icon" class="icon"></a>
+            <a href="https://www.github.com/VasileiosStergiou" target="_blank"><img src="github.png" alt="Instagram Icon" class="icon"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="linkedin.png" alt="Instagram Icon" class="icon"></a>
+            <a href="https://www.instagram.com/basilis_stergiou" target="_blank"><img src="instagram.png" alt="Instagram Icon" class="icon"></a>
+            <a href="https://www.facebook.com/basistergiou" target="_blank"><img src="fb.png" alt="Facebook Icon" class="icon"></a>
             <a class="flag" href= "index_gr.html">🇬🇷</a>
             <a class="flag" href= "index_fr.html">🇫🇷</a>
             <a class="flag">🇺🇸</a>
             <hr></hr>
+            <p id="timeOnPage"><span id="timeSpent"></span></p>
             <p>📞6943214343</p>
             <p id="currentDate"><span id="datePlaceholder"></span></p>
             <p id="currentTime"><span id="currentTime"></span></p>
-            <p>Anatoli,Ioannina,Greece</p>
+            <p>📌Anatoli,Ioannina,Greece</p>
 
             <script>
-                // Function to format the date as "Month day, Year"
                 function formatDate(date) {
                     const options = { year: 'numeric', month: 'long', day: 'numeric' };
                     return date.toLocaleDateString('en-US', options);
                 }
+
                 function formatTime(date) {
                     const hours = date.getHours().toString().padStart(2, '0'); // Ensure two digits for hours
                     const minutes = date.getMinutes().toString().padStart(2, '0'); // Ensure two digits for minutes
                     const seconds = date.getSeconds().toString().padStart(2, '0'); // Ensure two digits for seconds
                     return `${hours}:${minutes}:${seconds}`;
                 }
-        
-                // Function to update the displayed time
+
+                function formatElapsedTime(elapsedTime) {
+                    return `${elapsedTime.hours} hours, ${elapsedTime.minutes} minutes, ${elapsedTime.seconds} seconds`;
+                }
+                
+                currentTime = new Date();
+
                 function updateCurrentTime() {
                     const currentTime = new Date();
-                    document.getElementById('currentTime').textContent = formatTime(currentTime);
+                    document.getElementById('datePlaceholder').textContent = formatTime(currentTime);
                 }
-
-                // Update the time initially
+                
                 updateCurrentTime();
-                // Update the time every second (1000 milliseconds)
                 setInterval(updateCurrentTime, 1000);
                 var currentDate = new Date();
                 document.getElementById('datePlaceholder').textContent = formatDate(currentDate);
+
+                function calculateElapsedTime(startTime) {
+                    const currentTime = new Date();
+                    const elapsedTimeInMilliseconds = currentTime - startTime;
+
+                    const hours = Math.floor(elapsedTimeInMilliseconds / 3600000);
+                    const minutes = Math.floor((elapsedTimeInMilliseconds % 3600000) / 60000);
+                    const seconds = Math.floor((elapsedTimeInMilliseconds % 60000) / 1000);
+
+                    return { hours, minutes, seconds };
+                }
+
+                const startTime = currentDate;
+
+                function trackElapsedTime() {
+                    const elapsedTime = calculateElapsedTime(startTime);
+                    const formattedTime = formatElapsedTime(elapsedTime);
+                    document.getElementById('timeSpent').textContent = 'Current time viewing the portofolio: ' + formattedTime + ' seconds.';
+                }
+
+                const intervalId = setInterval(trackElapsedTime, 1000);
             </script>
         </footer>
     </body>

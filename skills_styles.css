@@ -5,16 +5,38 @@
 
 .jobskills,p{
     border-style:inherit;
-    font-size: 32px;
+    text-align: center;
+    font-size: 40px;
     color:#f7f8f6;
-    border-image: linear-gradient(25deg, purple, orange) 0.75;
     text-shadow: rgb(32, 25, 12) 0 0 15px;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+    max-width: 70%;
+    max-height: 50%;
+}
+
+.jobskills .languages{
     margin-top: 10px;
-    opacity: 0.8;
-    transition: 1.5s;
+}
+
+.jobskills-button, .softskills-button{
+    border-style: none;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    background:#07b410;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    border-radius: 45px;
+}
+
+.jobskill-description{
+    display: none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    text-align: left;
+    border-radius:90deg;
 }
 
 .icon{
@@ -24,14 +46,46 @@
     margin-top: 30px;
 }
 
-.icon:hover{
+.language:hover .jobskill-description{
+    display: block;
+    border-style:groove;
+    border-radius: 45deg;
+    border-color: rgb(58, 23, 87);
+    box-shadow: rgb(43, 17, 23);
+    background-color: rgb(8, 4, 55);
+    height: auto;
+    width: 500px;
+}
+
+.toggle_icon{
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.toggle_icon:hover{
+    transform: scale(1.5);
+}
+
+/*.icon:hover{
     transform: scale(2.5);
+}*/
+
+.language,.skill{
+    display:inline-flex;
+    font-size: 45px;
+    margin-left: 35px;
 }
 
 .language,.skill{
-    display: inline-flex;
-    margin-top: -110px;
-    margin-bottom: 0px;
+    display:none;
+    font-size: 45px;
+    margin-left: 35px;
+}
+
+.skill{
+    font-size: 35px;
 }
 
 .star-rating{
@@ -42,16 +96,22 @@
 
 .softskills{
     border-style:inherit;
-    font-size: 32px;
+    text-align: center;
+    font-size: 40px;
     color:#f7f8f6;
     text-shadow: rgb(32, 25, 12) 0 0 15px;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 10px;
-    opacity: 0.8;
-    transition: 1.5s;
+    max-width: auto;
+    max-height: auto;
 }
+
+/*.softskills:hover .skill{
+    display:inline-flex;
+}
+
+.jobskills:hover .language{
+    display:inline-flex;
+    transition: 0.7s;
+}*/
 
 .languages{
     display: inline-flex;
