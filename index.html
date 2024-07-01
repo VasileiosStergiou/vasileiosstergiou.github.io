@@ -105,9 +105,11 @@
             left: -12.5px;
         }
         .timeline-item-content {
+            padding: 20px;
             background-color: rgb(169, 97, 218);
             position: relative;
-            border-radius: 6px;
+            border-radius: 10%;
+            font-size:30px;
         }
         .content{
             display:block;
@@ -202,33 +204,38 @@
     </div>
 
     <hr>
-
-    <!-- Education Timeline Section -->
-    <div class="container my-5">
+    
+    <!-- 
+        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">${repo.name}</h5>
+                                <p class="card-text">${repo.description || 'No description available'}</p>
+                                <a href="${repo.html_url}" class="btn btn-primary" target="_blank">View Repository</a>
+                            </div>
+                        </div>
+    Education Timeline Section -->
+    <div class="container my-4">
         <h2 class="text-center">Education</h2>
         <div class="timeline">
             <div class="timeline-item left">
                 <div class="timeline-item-content">
-                    <h3>2010 - 2014</h3>
-                    <h4>Bachelor's Degree in Computer Science</h4>
-                    <p>University of Example</p>
-                    <span class="timeline-date">September 2010 - June 2014</span>
+                    <h5>Prototype High School of Zosimaia</h5>
+                    <h5>High School Degree</h5>
+                    <h5 class="timeline-date">2011 – 2014, Ioannina, Greece</h5>
                 </div>
             </div>
             <div class="timeline-item right">
                 <div class="timeline-item-content">
-                    <h3>2014 - 2016</h3>
-                    <h4>Master's Degree in Software Engineering</h4>
-                    <p>Institute of Example</p>
-                    <span class="timeline-date">September 2014 - June 2016</span>
+                    <h5>General Lyceum of Anatoli</h5>
+                    <h5> Lyceum Degree</h5>
+                    <h5>2014 – 2017, Ioannina, Greece</h5>
                 </div>
             </div>
             <div class="timeline-item left">
                 <div class="timeline-item-content">
-                    <h3>2016 - 2018</h3>
-                    <h4>Ph.D. in Artificial Intelligence</h4>
-                    <p>Example University</p>
-                    <span class="timeline-date">September 2016 - June 2018</span>
+                    <h5>CS Dpt</h5>
+                    <h5>Msc: Computer Science</h5>
+                    <h5 class="timeline-date">2017 – 2023, UOI, Greece</h5>
                 </div>
             </div>
         </div>
