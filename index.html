@@ -125,8 +125,9 @@
             border:double;
             color: rgb(36, 126, 60);
         }
-        .btn-primary{
-
+        .profile-image{
+            height: 80%;
+            width: 120%;
         }
 
     </style>
@@ -139,12 +140,13 @@
                 const reposContainer = document.getElementById('repos');
                 repos.forEach(repo => {
                     const repoCard = document.createElement('div');
-                    repoCard.className = 'col-md-4';
+                    repoCard.className = 'col-mb-4';
                     repoCard.innerHTML = 
                     `
                         <style>
                             .card-body{
                                 background-image: linear-gradient(rgb(190, 126, 0),rgb(171, 73, 102));
+                                display: inline-flexbox;
                             }
                             .btn-primary{
                                 background: green;
@@ -152,6 +154,7 @@
 
                         }
                         </style>
+                        <div class="text-center">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <h5 class="card-title">${repo.name}</h5>
@@ -159,7 +162,7 @@
                                 <div class="text-center">
                                 <a href="${repo.html_url}" class="btn btn-primary" target="_blank">View Repository</a>
                                 </div>
-                                </div>
+                            </div>
                         </div>
                     `;
                     reposContainer.appendChild(repoCard);
