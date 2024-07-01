@@ -1,388 +1,336 @@
 <!DOCTYPE html>
-<html>
-    
-    <head>
-        <title>My Personal Portofolio </title>
-        <link rel="stylesheet" href="web_styles.css">
-        <link rel="stylesheet" href="media.css">
-        <link rel="stylesheet" href="contact.css">
-        <link rel="stylesheet" href="skills_styles.css">
-        <link rel="stylesheet" href="stars.css">
-        <link rel="stylesheet" href="video.css">
-        <link rel="stylesheet" href="menu-bar.css">
-        <link rel="stylesheet" href="footer.css">
-        <link rel="stylesheet" href="timeline.css">
-        <!--<link rel="stylesheet" href="screen.css">-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasileios Stergiou Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: url('bg1.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    <body>
-        <meta charset="UTF-8">
-        <div class="topnav" id ="topnav">
-            <div class="home-content">
-                <a href="#about" >❓ About</a>
-                <a href="https://github.com/VasileiosStergiou" target="_blank">💼 Visit my GitHub</a>
-                <a href="mailto:vasileiosstergiou99@gmail.com?subject = Feedback&body = Message" target="_blank"> 📩 Email Me</a>
-                <a href="#contact"> 📞 Contact & Feedback</a>
-                <a href="CV.pdf" target="_blank" download> 📄 Download my CV</a>
+        .navbar-section {
+            background-color: #376dab; /* Bootstrap's primary blue color */
+        }
 
+        .footer-section {
+            background-color: #0c1a29; /* Bootstrap's primary blue color */
+        }
+
+        .profile-image {
+            max-width: auto; /* Make sure the image is responsive */
+            height: auto; /* Maintain the aspect ratio */
+            border-radius: 50%;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #007bff;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12.5px;
+            background-color: rgb(179, 54, 54);
+            border: 4px solid #446f9c;
+            top: 30px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #007bff;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #007bff;
+        }
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #007bff;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #007bff transparent transparent;
+        }
+        .right::after {
+            left: -12.5px;
+        }
+        .timeline-item-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+    </style>
+
+    <script>
+        async function fetchRepos() {
+            try {
+                const response = await fetch('https://api.github.com/users/vasileiosstergiou/repos');
+                const repos = await response.json();
+                const reposContainer = document.getElementById('repos');
+                repos.forEach(repo => {
+                    const repoCard = document.createElement('div');
+                    repoCard.className = 'col-md-4';
+                    repoCard.innerHTML = `
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">${repo.name}</h5>
+                                <p class="card-text">${repo.description || 'No description available'}</p>
+                                <a href="${repo.html_url}" class="btn btn-primary" target="_blank">View Repository</a>
+                            </div>
+                        </div>
+                    `;
+                    reposContainer.appendChild(repoCard);
+                });
+            } catch (error) {
+                console.error('Error fetching repositories:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchRepos);
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-section">
+        <a class="navbar-brand" href="#">Vasileios Stergiou </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section 
+    <div class="hero-section">
+        <div class="container">
+            <h1 class="display-4">Welcome to My Portfolio</h1>
+            <p class="lead">I am Vasileios Stergiou, a passionate developer.</p>
+            <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+        </div>
+    </div>
+    -->
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="vasilis.jpg" alt="Vasileios Stergiou" class="img-fluid profile-image">
             </div>
         </div>
+    </div>
 
-        <div class="container">
-            <section id="about"> 
-                <div class="profile">
-                    <img src = "vasilis.jpg" class="profile-img">
-                        <div class="text-content">
-                            <h1>About</h1>
-                            <p>
-                                My name is Vasilis Stergiou. I am 23 years old 
-                                and i am a Msc graduate on Computer Science and Enginnering
-                                <br>
-                                <br>Currently, i am living at Ioannina with my parents and my little brother.
-                                <br>
-                                <br>My personal interests in Software Engineering focus on image processing and in software development,in general.
-                                <br>
-                                <br>As a person, i am open to new ideas and brainstorming, as i like getting ideas and discussing them.          
-                            </p>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <hr></hr>
+    <hr>
 
+    <!-- Education Timeline Section -->
+    <div class="container my-3">
+        <h2 class="text-center">Education</h2>
         <div class="timeline">
-            <h1>Education</h1>
-            <hr></hr>
-            <div class="event">
-                <div class="event-content">
-                    <p class="date">2011 - 2014</p>
-                    <p>Zosimea Experimentary High School, Ioannina</p>
+            <div class="timeline-item left">
+                <div class="timeline-item-content">
+                    <h3>2010 - 2014</h3>
+                    <h4>Bachelor's Degree in Computer Science</h4>
+                    <p>University of Example</p>
+                    <span class="timeline-date">September 2010 - June 2014</span>
                 </div>
             </div>
-            <hr></hr>
-            <div class="event">
-                <div class="event-content">
-                    <p class="date">2014 - 2017</p>
-                    <p>General Lyceum of Anatoli, Ioannina</p>
-                    <div class="event">
-                        <div class="event-content">
-                            <p class="date">2016</p>
-                            <p>Member of Hellenic Youth Parliament project, Athens</p>
-                        </div>
-                    </div>
-        
+            <div class="timeline-item right">
+                <div class="timeline-item-content">
+                    <h3>2014 - 2016</h3>
+                    <h4>Master's Degree in Software Engineering</h4>
+                    <p>Institute of Example</p>
+                    <span class="timeline-date">September 2014 - June 2016</span>
                 </div>
             </div>
-            <hr></hr>
-
-            <div class="event">
-                <div class="event-content">
-                    <p class="date">2017 - 2023</p>
-                    <p>Department of Computer Science and Engineering, University of Ioannina
-                    </p>
-                    <div class="event">
-                        <div class="event-content">
-                            <p class="date">2022</p>
-                            <p>Intership at NIKI Ltd. Companny, Ioannina</p>
-                        </div>
-                    </div>
+            <div class="timeline-item left">
+                <div class="timeline-item-content">
+                    <h3>2016 - 2018</h3>
+                    <h4>Ph.D. in Artificial Intelligence</h4>
+                    <p>Example University</p>
+                    <span class="timeline-date">September 2016 - June 2018</span>
                 </div>
             </div>
         </div>
+    </div>
 
-        <hr></hr>
+    <hr>
 
-        <div class="container">
-            <div class="description" align="center">
-                <div class="jobskills">
-                    <h2 align="Center">Job Skills
-                        <button class="jobskills-button" onclick="showJobskils()">Show Job Skills</button>
-                    </h2>
-                    <p>
-                        The Job Skills i possess include the programming languages
-                        <br>that i am able to work with and their respective mastery level, as well.
-                        <br>
-                        My main experience is in academic level, as there is no previous working experience, thus far.
-                    </p>
-                    <ul class="languages" id="languages">
-                        <div class="language" id = "language-0">
-                            <li>
-                                <img src="python.png" alt="Python Icon" class="icon"> 
-                                Python
-                                <span class="star-rating" data-rating="4"></span>
+    <!-- About Section -->
+    <div class="content">
+        <div class="container my-1">
+            <h2 class="text-center">Github Projects</h2>
+            <div id="repos" class="row">
+                <!-- Repositories will be displayed here -->
+            </div>
+        </div>
+    </div>
 
-                                <div class="jobskill-description" id="python">
-                                    Python is the main programming language i am aquainted with, in which i have
-                                    experience in using Data Science libraries, such as Pandas, in my two-month internship at 
-                                    NIKI Ltd. Company and Image processing libraries (Opencv, Pytorch, Tensorflow) for my Diploma Thesis.
-                                    <br>PyCharm consists of the main Python-oriented editor i have used, in my internship.
-                                </div>
-                            </li>
-                        </div>
+    <hr>
 
-                        <div class="language" id = "language-1">
-                            <li>
-                                <img src="java.png" alt="Python Icon" class="icon"> 
-                                Java
-                                <span class="star-rating" data-rating="4"></span>
-                                <div class="jobskill-description" id="java">
-                                    Java is my second most used programming language, mainly experienced in Eclipse editor in terms of software development,
-                                    along with Swing, JavaFX for GUI development and refactoring projects,in academic level.
-                                    <br>Academic level projects, such as a  simple Neural Network and K-means algorithm, were also implemented in Java language. 
-                                </div>
-                            </li>
-                        </div>
+    <!-- Portfolio Section
+    <div class="container my-5">
+        <h2 class="text-center">My Portfolio</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="sql.png" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">Brief description of the project.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="c.png" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2</h5>
+                        <p class="card-text">Brief description of the project.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="python.png" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">Brief description of the project.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="language" id = "language-2">
-                            <li>
-                                <img src="octave.png" alt="Python Icon" class="icon">
-                                Octave 
-                                <span class="star-rating" data-rating="4"></span>
-                                <div class="jobskill-description" id="octave">
-                                    My experience in Octave includes mainly Signal processing and Image processing, in academic courses.
-                            </li>
-                        </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="octave.png" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">Brief description of the project.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="language" id = "language-3">
-                            <li>
-                                <img src="c.png" alt="Python Icon" class="icon">
-                                C  
-                                <span class="star-rating" data-rating="3"></span>
-                                <div class="jobskill-description" id="C">
-                                    My experience with C language mainly focuses on academic level projects on Opeerating Systems,
-                                    on the implementation of multi-threaded Readers-Writers algorithm on a given database and a Journal backlog on
-                                    Minix. 
-                                </div>
-                            </li>
-                        </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="java.png" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">Brief description of the project.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="language" id = "language-4">
-                            <li>
-                                <img src="cpp.png" alt="Python Icon" class="icon">
-                                C++   
-                                <span class="star-rating" data-rating="3"></span>
-                                <div class="jobskill-description" id="cpp">
-                                    My experience in C++ language includes the use of OpenGL library, in order to
-                                    implement a simple project in Computer Graphics academic course.
-                                </div>
-                            </li>
-                        </div>
-
-                        <div class="language" id = "language-5">
-                            <li>
-                                <img src="cs.png" alt="Python Icon" class="icon">
-                                C#  
-                                <span class="star-rating" data-rating="3"></span>
-                                <div class="jobskill-description" id="cs">
-                                    In the same way as my experience in C++ language, C# language experience was acquainted in the
-                                    form of Unity, in order to implement a simple project in Computer Graphics academic course.
-                                </div>
-                            </li>
-                        </div>
-                        
-                        <div class="language" id = "language-6">
-                            <li>
-                                <img src="sql.png" alt="Python Icon" class="icon">
-                                SQL 
-                                <span class="star-rating" data-rating="3"></span>
-                                <div class="jobskill-description" id="sql">
-                                    My experience in SQL, in academic level, includes academic projects
-                                    for data processing and filtering using MySQL and Python Connector library 
-                                    for further processing.
-                                </div>
-                            </li>
-                        </div>
-
-                        <script>
-                            function showJobskils() {
-                                var parentContainer = document.getElementById('languages');
-                                var nestedDivs = parentContainer.getElementsByClassName('language');
-                                var numberOfDivs = nestedDivs.length;
-                                Object.entries(nestedDivs).forEach(entry => {
-                                    const [key, value] = entry;
-                                    value.style.display = "inline-flex";
-                                }); 
-                            }
-                        </script>
-                    </ul>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="cs.png" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">Brief description of the project.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <hr></hr>
-
-        <div class="container">
-            <div class="softskills" align="center">
-                <h2 align="center">Soft Skills
-                    <button class="softskills-button" onclick="showSoftskils()">Show Soft Skills</button></h2>
-                <p align = "center">
-                    The Soft skills that i possess are my qualities as a person,
-                    specifically when i interact 
-                    <br>with my colleagues and communicate with them 
-                    <br>and my skills to organize my responsibities and deadlines.
-                </p>
-                <ul class="softskills-list" id = "softskills-list" align = "center">
-                    <div class="skill">
-                        <li>
-                            <img src="communication.png" alt="Python Icon" class="icon">
-                            Communication 
-                            <span class="star-rating" data-rating="4"></span>
-                        </li>
-                    </div>
-
-                    <div class="skill">
-                        <li>
-                            <img src="collaboration.png" alt="Python Icon" class="icon">
-                            Collaboration 
-                            <span class="star-rating" data-rating="4"></span>
-                        </li>
-                    </div>
-                    
-                    <div class="skill">
-                        <li><img src="openmind.png" alt="Python Icon" class="icon">
-                            Open-mindedness 
-                            <span class="star-rating" data-rating="4"></span>
-                        </li>
-                    </div>
-                    
-                    <div class="skill">
-                        <li><img src="adaptability.jpg" alt="Python Icon" class="icon">
-                            Adaptability 
-                            <span class="star-rating" data-rating="4"></span>
-                        </li>
-                    </div>
-                    
-                    <div class="skill">
-                        <li><img src="responsibility.jpg" alt="Python Icon" class="icon">
-                            Responsibity 
-                            <span class="star-rating" data-rating="4"></span>
-                        </li>
-                    </div>
-
-                    <div class="skill">
-                        <li><img src="problemsolving.png" alt="Python Icon" class="icon">
-                            Problem-Solving 
-                            <span class="star-rating" data-rating="4"></span>
-                        </li>
-                    </div>
-
-                    <div class="skill">
-                        <li><img src="organization.png" alt="Python Icon" class="icon">
-                            Organization 
-                            <span class="star-rating" data-rating="4"></span>
-                        </li>
-                    </div>
-
-                    <script>
-                        function showSoftskils() {
-                            var parentContainer = document.getElementById('softskills-list');
-                            var nestedDivs = parentContainer.getElementsByClassName('skill');
-                            var numberOfDivs = nestedDivs.length;
-                            Object.entries(nestedDivs).forEach(entry => {
-                                const [key, value] = entry;
-                                value.style.display = "inline-flex";
-                            }); 
-                        }
-                    </script>
-                </ul>
+    
+    -->
+    
+    <!-- Contact Section -->
+    <div class="container my-5">
+        <h2 class="text-center">Contact Me</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
             </div>
-        </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 
-        <hr></hr>
+    <!-- Footer -->
+    <footer class="footer-section text-white text-center py-3">
+        <p>&copy; 2024 Vasileios Stergiou. All Rights Reserved.</p>
+    </footer>
 
-        <div class="container">
-            <section id="contact">
-                <form action="send_email.php" method="post">
-                    <div class="contact-space" align = "center">
-                        <h2 align="center">Contact & Feedback</h2>
-                        <p align = "center" class="textfield-description">
-                            You can send me some feedback through the text field bellow.
-                        </p>
-                                    
-                        <div class="person-info">
-                            <input type="text" name="first-name" placeholder="First Name" class="first-name" required>
-                            <input type="text"  name="last-name" placeholder="Last Name" class="last-name" required>
-                            <input type="text" name="subject" placeholder="Subject" class="subject" required>
-                        </div>
-                        
-                        <div class="contact-form">
-                            <textarea name="text-field" class="text-field"></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-button">Submit</button>
-                    </div>
-                </form>
-            </section>
-        </div>
-        <footer>
-            <p>You can contact with me on social media</p>
-            <a href="mailto:vasileiosstergiou99@gmail.com?subject = Feedback&body = Message" target="_blank"><img src="gmail.png" alt="Instagram Icon" class="icon"></a>
-            <a href="https://www.github.com/VasileiosStergiou" target="_blank"><img src="github.png" alt="Instagram Icon" class="icon"></a>
-            <a href="https://www.linkedin.com/" target="_blank"><img src="linkedin.png" alt="Instagram Icon" class="icon"></a>
-            <a href="https://www.instagram.com/basilis_stergiou" target="_blank"><img src="instagram.png" alt="Instagram Icon" class="icon"></a>
-            <a href="https://www.facebook.com/basistergiou" target="_blank"><img src="fb.png" alt="Facebook Icon" class="icon"></a>
-            <a class="flag" href= "index_gr.html">🇬🇷</a>
-            <a class="flag" href= "index_fr.html">🇫🇷</a>
-            <a class="flag">🇺🇸</a>
-            <hr></hr>
-            <p id="timeOnPage"><span id="timeSpent"></span></p>
-            <p>📞6943214343</p>
-            <p id="currentDate"><span id="datePlaceholder"></span></p>
-            <p id="currentTime"><span id="currentTime"></span></p>
-            <p>📌Anatoli,Ioannina,Greece</p>
-
-            <script>
-                function formatDate(date) {
-                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-                    return date.toLocaleDateString('en-US', options);
-                }
-
-                function formatTime(date) {
-                    const hours = date.getHours().toString().padStart(2, '0'); // Ensure two digits for hours
-                    const minutes = date.getMinutes().toString().padStart(2, '0'); // Ensure two digits for minutes
-                    const seconds = date.getSeconds().toString().padStart(2, '0'); // Ensure two digits for seconds
-                    return `${hours}:${minutes}:${seconds}`;
-                }
-
-                function formatElapsedTime(elapsedTime) {
-                    return `${elapsedTime.hours} hours, ${elapsedTime.minutes} minutes, ${elapsedTime.seconds} seconds`;
-                }
-                
-                currentTime = new Date();
-
-                function updateCurrentTime() {
-                    const currentTime = new Date();
-                    document.getElementById('datePlaceholder').textContent = formatTime(currentTime);
-                }
-                
-                updateCurrentTime();
-                setInterval(updateCurrentTime, 1000);
-                var currentDate = new Date();
-                document.getElementById('datePlaceholder').textContent = formatDate(currentDate);
-
-                function calculateElapsedTime(startTime) {
-                    const currentTime = new Date();
-                    const elapsedTimeInMilliseconds = currentTime - startTime;
-
-                    const hours = Math.floor(elapsedTimeInMilliseconds / 3600000);
-                    const minutes = Math.floor((elapsedTimeInMilliseconds % 3600000) / 60000);
-                    const seconds = Math.floor((elapsedTimeInMilliseconds % 60000) / 1000);
-
-                    return { hours, minutes, seconds };
-                }
-
-                const startTime = currentDate;
-
-                function trackElapsedTime() {
-                    const elapsedTime = calculateElapsedTime(startTime);
-                    const formattedTime = formatElapsedTime(elapsedTime);
-                    document.getElementById('timeSpent').textContent = 'Current time viewing the portofolio: ' + formattedTime + ' seconds.';
-                }
-
-                const intervalId = setInterval(trackElapsedTime, 1000);
-            </script>
-        </footer>
-    </body>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
