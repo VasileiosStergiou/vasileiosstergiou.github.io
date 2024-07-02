@@ -23,7 +23,7 @@
         }
 
         body{
-            background-image: linear-gradient(rgb(6, 36, 41),rgb(30, 174, 210));
+            background-image: linear-gradient(rgb(6, 36, 41),rgb(40, 87, 100));
             color: beige;
         }
 
@@ -38,7 +38,7 @@
         }
 
         .education-process .card-body{
-            background-image: linear-gradient(rgb(53, 83, 116),rgb(171, 73, 102));
+            background-image: linear-gradient(rgb(19, 39, 59),rgb(72, 37, 47));
             border-style:groove;
             border-color: rgb(103, 38, 129);
         }
@@ -125,10 +125,14 @@
             border:double;
             color: rgb(36, 126, 60);
         }
+        .education-process{
+            display: block;
+        }
+        /*
         .profile-image{
             height: 80%;
             width: 120%;
-        }
+        }*/
 
     </style>
 
@@ -140,6 +144,9 @@
                 const reposContainer = document.getElementById('repos');
 
                 repos.forEach(repo => {
+                    if (!repo.description){
+                        return;
+                    }
                     if (repo.description.length == 0 || repo.name.includes("github")){
                         return;
                     }
@@ -149,7 +156,7 @@
                     `
                         <style>
                             .card-body{
-                                background-image: linear-gradient(rgb(53, 83, 116),rgb(171, 73, 102));
+                                background-image: linear-gradient(rgb(19, 39, 59),rgb(72, 37, 47));
                                 border-style:groove;
                             }
                             .btn-primary{
@@ -177,6 +184,42 @@
 
         document.addEventListener('DOMContentLoaded', fetchRepos);
     </script>
+
+    <script>
+        function manageEducationContentsVisibility() {
+            var education_class = document.getElementById("ed");
+            var education_btn = document.getElementById("ed-btn");
+
+            if (education_class.style.display === "none"){
+                education_class.style.display="block";
+                education_btn.innerText = "Hide Education Process";
+            }
+            else{
+                education_class.style.display="none";
+                education_btn.innerText = "Show Education Process";
+            };
+            console.log(education_class.style);
+            console.log(education_class.style.display);
+        }
+    </script>
+
+<script>
+    function manageGithubContentsVisibility() {
+        var education_class = document.getElementById("repos");
+        var education_btn = document.getElementById("git-btn");
+
+        if (education_class.style.display === "none"){
+            education_class.style.display="block";
+            education_btn.innerText = "Hide Github Projects";
+        }
+        else{
+            education_class.style.display="none";
+            education_btn.innerText = "Show Github Projects";
+        };
+        console.log(education_class.style);
+        console.log(education_class.style.display);
+    }
+</script>
 </head>
 
 <body>
@@ -254,9 +297,9 @@
                         </div>
     Education Timeline Section -->
     <div class="container mb-4">
-        <h2 class="text-center">Education</h2>
+        <h2 class="text-center">Education <button class="btn btn-primary" id="ed-btn" onClick="manageEducationContentsVisibility()">Hide Education Process</button></h2>
         <!--  <div class ="btn btn-primary">Show Education Process</div> -->
-          <div class = "education-process">
+          <div class = "education-process" id="ed">
                 <div class="card mb-4">
                     <div class="card-body">
                         <h5>Prototype High School of Zosimaia</h5>
@@ -287,7 +330,7 @@
     <!-- About Section -->
     <div class="content">
         <div class="container my-1">
-            <h2 class="text-center">Github Projects</h2>
+            <h2 class="text-center">Github Projects <button class="btn btn-primary" id="git-btn" onClick="manageGithubContentsVisibility()">Hide Github Projects</button></h2>
             <div id="repos" class="row">
                 <!-- Repositories will be displayed here -->
             </div>
