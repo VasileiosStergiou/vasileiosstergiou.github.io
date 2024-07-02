@@ -149,8 +149,8 @@
                     `
                         <style>
                             .card-body{
-                                background-image: linear-gradient(rgb(190, 126, 0),rgb(171, 73, 102));
-                                display: inline-flexbox;
+                                background-image: linear-gradient(rgb(53, 83, 116),rgb(171, 73, 102));
+                                border-style:groove;
                             }
                             .btn-primary{
                                 background: green;
@@ -159,12 +159,12 @@
                         }
                         </style>
                         
-                        <div class="card mb-4">
+                        <div class="container mb-4">
                             <div class="card-body">
                                 <h5 class="card-title">${repo.name}</h5>
-                                <p class="card-text">${repo.description}</p>
+                                <h5 class="card-text">${repo.description}</h5>
                                 <div class="text-center">
-                                <a href="${repo.html_url}" class="btn btn-primary" target="_blank">View Repository</a>
+                                <h5 href="${repo.html_url}" class="btn btn-primary" target="_blank">View Repository</h5>
                                 </div>
                             </div>
                     `;
@@ -253,7 +253,7 @@
                             </div>
                         </div>
     Education Timeline Section -->
-    <div class="container my-4">
+    <div class="container mb-4">
         <h2 class="text-center">Education</h2>
         <!--  <div class ="btn btn-primary">Show Education Process</div> -->
           <div class = "education-process">
