@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vasileios Stergiou Portfolio</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         .hero-section {
             background: url('bg1.jpg') no-repeat center center;
@@ -77,47 +79,7 @@
             border-radius: 50%;
             z-index: 1;
         }
-        .left {
-            left: 0;
-        }
-        .right {
-            left: 50%;
-        }
-        .left::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 120px;
-            width: 0;
-            z-index: 1;
-            right: 25px;
-            border: medium solid #ca3513;
-            border-width: 10px 0 10px 10px;
-            border-color: transparent transparent transparent #c34419;
-        }
-        .right::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 130px;
-            width: 0;
-            z-index: 1;
-            left: 25px;
-            border: medium solid #007bff;
-            border-width: 10px 10px 10px 0;
-            border-color: transparent #c34419 transparent transparent;
-        }
-        .right::after {
-            left: -12.5px;
-        }
-
-        .timeline-item-content {
-            padding: 10% 40% 10% 20%;
-            background-color: rgb(48, 57, 158);
-            position: relative;
-            border-radius: 10%;
-            font-size:30%;
-        }
+    
         .content{
             display:block;
         }
@@ -126,12 +88,34 @@
             color: rgb(36, 126, 60);
         }
         .education-process{
-            display: block;
+            display:block;
         }
+
+        .skills-section {
+            margin: 20px 0;
+        }
+
+        .skill {
+            margin-bottom: 10px;
+        }
+
+        .stars i {
+            color: gold;
+        }
+
+        .skills-section{
+            display: inline-flexbox;
+        }
+        
         /*
         .profile-image{
             height: 80%;
             width: 120%;
+        }*/
+
+        /*
+        .info{
+            display:inline-table
         }*/
 
     </style>
@@ -189,7 +173,7 @@
         function manageEducationContentsVisibility() {
             var education_class = document.getElementById("ed");
             var education_btn = document.getElementById("ed-btn");
-
+            console.log(education_class.style.display);
             if (education_class.style.display === "none"){
                 education_class.style.display="block";
                 education_btn.innerText = "Hide Education Process";
@@ -197,7 +181,7 @@
             else{
                 education_class.style.display="none";
                 education_btn.innerText = "Show Education Process";
-            };
+            }
             console.log(education_class.style);
             console.log(education_class.style.display);
         }
@@ -297,7 +281,10 @@
                         </div>
     Education Timeline Section -->
     <div class="container mb-4">
-        <h2 class="text-center">Education <button class="btn btn-primary" id="ed-btn" onClick="manageEducationContentsVisibility()">Hide Education Process</button></h2>
+        <h2 class="text-center">Education</h2>
+        <div class="text-center">
+        <button class="btn btn-primary" id="ed-btn" onClick="manageEducationContentsVisibility()">Hide Education Process</button>
+        </div>
         <!--  <div class ="btn btn-primary">Show Education Process</div> -->
           <div class = "education-process" id="ed">
                 <div class="card mb-4">
@@ -330,9 +317,110 @@
     <!-- About Section -->
     <div class="content">
         <div class="container my-1">
-            <h2 class="text-center">Github Projects <button class="btn btn-primary" id="git-btn" onClick="manageGithubContentsVisibility()">Hide Github Projects</button></h2>
+            <h2 class="text-center">Github Projects</h2>
+            <div class="text-center">
+            <button class="btn btn-primary" id="git-btn" onClick="manageGithubContentsVisibility()">Hide Github Projects</button>
+            </div>
             <div id="repos" class="row">
                 <!-- Repositories will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Skills Section -->
+    <div class="text-center">
+        <div class="container my-4" id ="programming-skills">
+            <h2 class="text-center">Programming Skills</h2>
+            <div class="skills-section">
+                <div class="skill">
+                    <h5>Python</h5>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h5>Java</h5>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h5>Octave</h5>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h5>C</h5>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h5>C++</h5>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h5>HTML & CSS</h5>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h5>SQL</h5>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h5>Unity</h5>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -361,14 +449,49 @@
         </form>
     </div>
 
+        
+
     <!-- Footer -->
     <footer class="footer-section text-white text-center py-3">
         <p>&copy; 2024 Vasileios Stergiou. All Rights Reserved.</p>
+        <p>Anatoli,Ioannina,Greece</p>
+        <div class="info">
+            <span>📞6943214343</span>
+            <span id="currentDate"><span id="datePlaceholder"></span>
+            <span id="currentTime"><span id="currentTime"></span>
+        </div>
+            <script>
+                // Function to format the date as "Month day, Year"
+                function formatDate(date) {
+                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                    return date.toLocaleDateString('en-US', options);
+                }
+                function formatTime(date) {
+                    const hours = date.getHours().toString().padStart(2, '0'); // Ensure two digits for hours
+                    const minutes = date.getMinutes().toString().padStart(2, '0'); // Ensure two digits for minutes
+                    const seconds = date.getSeconds().toString().padStart(2, '0'); // Ensure two digits for seconds
+                    return `${hours}:${minutes}:${seconds}`;
+                }
+        
+                // Function to update the displayed time
+                function updateCurrentTime() {
+                    const currentTime = new Date();
+                    document.getElementById('currentTime').textContent = formatTime(currentTime);
+                }
+
+                // Update the time initially
+                updateCurrentTime();
+                // Update the time every second (1000 milliseconds)
+                setInterval(updateCurrentTime, 1000);
+                var currentDate = new Date();
+                document.getElementById('datePlaceholder').textContent = formatDate(currentDate);
+            </script>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 </body>
 </html>
