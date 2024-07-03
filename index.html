@@ -40,7 +40,7 @@
         }
 
         .education-process .card-body{
-            background-image: linear-gradient(rgb(19, 39, 59),rgb(72, 37, 47));
+            background-color: rgb(12, 32, 38);
             border-style:groove;
             border-color: rgb(103, 38, 129);
         }
@@ -107,17 +107,24 @@
             display: inline-flexbox;
         }
         
-        /*
-        .profile-image{
-            height: 80%;
-            width: 120%;
-        }*/
+        .soft-skills-section h5:hover{
+            color: #f1d313;
+        }
 
-        /*
-        .info{
-            display:inline-table
-        }*/
+        ol.a {
+            list-style-type: square;
+            text-align: left;
+        }
 
+        .internship-content p{
+            text-align: left; 
+        }
+
+        .internship-date p{
+            text-align: center;
+        }
+
+        
     </style>
 
     <script>
@@ -140,7 +147,7 @@
                     `
                         <style>
                             .card-body{
-                                background-image: linear-gradient(rgb(19, 39, 59),rgb(72, 37, 47));
+                                background-color: rgb(12, 32, 38);
                                 border-style:groove;
                             }
                             .btn-primary{
@@ -244,7 +251,7 @@
     <div class="container my-4">
         <div class="row">
             <div class="col-md-4">
-                <h2>About Me</h2>
+                <h1>About Me</h1>
                 <p>As a person, i am open to new ideas and
                     communicating with my colleagues in a
                     variety of topics, both in work-related topics
@@ -281,7 +288,7 @@
                         </div>
     Education Timeline Section -->
     <div class="container mb-4">
-        <h2 class="text-center">Education</h2>
+        <h1 class="text-center">Education</h1>
         <div class="text-center">
         <button class="btn btn-primary" id="ed-btn" onClick="manageEducationContentsVisibility()">Hide Education Process</button>
         </div>
@@ -299,6 +306,7 @@
                         <h5>General Lyceum of Anatoli</h5>
                         <h5> Lyceum Degree</h5>
                         <h5>2014 – 2017, Ioannina, Greece</h5>
+                        <h5>Attendant in Hellenic Youth Parliament project (2016)</h5>
                     </div>
                 </div>
                 <div class="card mb-4">
@@ -317,7 +325,7 @@
     <!-- About Section -->
     <div class="content">
         <div class="container my-1">
-            <h2 class="text-center">Github Projects</h2>
+            <h1 class="text-center">Github Projects</h1>
             <div class="text-center">
             <button class="btn btn-primary" id="git-btn" onClick="manageGithubContentsVisibility()">Hide Github Projects</button>
             </div>
@@ -332,7 +340,7 @@
     <!-- Skills Section -->
     <div class="text-center">
         <div class="container my-4" id ="programming-skills">
-            <h2 class="text-center">Programming Skills</h2>
+            <h1 class="text-center"></i>Programming Skills</h1>
             <div class="skills-section">
                 <div class="skill">
                     <h5>Python</h5>
@@ -416,7 +424,8 @@
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
                         <i class="far fa-star"></i>
                         <i class="far fa-star"></i>
                     </div>
@@ -425,6 +434,142 @@
         </div>
     </div>
 
+    <hr>
+
+    <!-- Skills Section -->
+    <div class="text-center">
+        <div class="container my-4" id ="programming-skills">
+            <h1 class="text-center">Soft Skills</h1>
+            <div class="soft-skills-section">
+                <div class="skill">
+                    <h5>Communication</h5>
+                </div>
+                <div class="skill">
+                    <h5>Collaboration</h5>
+                </div>
+                <div class="skill">
+                    <h5>Open-mindedness</h5>
+                </div>
+                <div class="skill">
+                    <h5>Adaptabilty</h5>
+                </div>
+                <div class="skill">
+                    <h5>Rensponsibility</h5>
+                </div>
+                <div class="skill">
+                    <h5>Problem-Solving</h5>
+                </div>
+                <div class="skill">
+                    <h5>Organization</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Skills Section -->
+    <div class="text-center">
+        <div class="container my-4" id ="programming-skills">
+            <h1 class="text-center">Internship</h1>
+            <div class="internship">
+                <h3>Two - month internship at NIKI LTD Company</h3>
+                <br>
+                <div class="internship-content">
+                    <p>Data analysis and filtering on CSV file files containg the workhours and tasks per current employee,
+                       for the purpose of automating the extraction of the total workhours, tasks
+                       and projects the employees have worked on. 
+                       The considered criteria in implementing the described automation are the following:
+                    </p>
+                    <div class="text-center">
+                        <ol class="a">
+                            <li>The names of the projects of interest that the filtering is to be applied, 
+                                resulting in the extraction of the employees that have worked on the input projects,
+                                the tasks per project and the total workhours on each project, depending 
+                                on the number of the its tasks.</li>
+                            <br>
+                            <li>The current employees of the company, for the purpose of implementing a filtering 
+                                that extracts the projects they have on, the respective tasks per project, the workhours per task
+                                and the total workhours spent on the project.The described filtering was implemented to be applied 
+                                with more than one employee as an input, in case some employees have worked on a project as a group.
+                            </li>
+                            <br>
+                            <li>The input months and years that the projects have been implemented, in order for the previously mentioned
+                                types of filtering to be applied on specif monts and years
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="internship-date">
+                        <p>04-2022 – 05-2022, Ioannina, Greece</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="text-center">
+        <div class="container my-4" id ="programming-skills">
+            <h1 class="text-center">Seminars</h1>
+            <div class="internship">
+                <li> Web Analytics: Using Data to Help a Business Grow (2018) </li>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <!-- Skills Section -->
+    <div class="text-center">
+        <div class="container my-4" id ="programming-skills">
+            <h1 class="text-center"></i>Languages</h1>
+            <div class="skills-section">
+                <div class="skill">
+                    <h4>Greek - Native Language</h4>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <br>
+                <div class="skill">
+                    <h4>English - Advanced level of mastery </h4>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <h5>C2 Cambridge Proficiency Certificate</h5>
+                        <h5>C2 MSU Proficiency Certificate</h5>
+                        <h5>B2 Cambridge Lower Certificate</h5>
+                        <h5>B2 MSU Lower Certificate</h5>
+                        <h5>B2 TOEIC Lower Certificate</h5>
+                    </div>
+                </div>
+                <br>
+                <div class="skill">
+                    <h4>French - Basic level of mastery </h4>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <h5>A2 Regional Certificate</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <hr>
     
     <!-- Contact Section -->
