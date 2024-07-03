@@ -163,7 +163,7 @@
                                 <h5 class="card-text">${repo.description}</h5>
                                 <div class="text-center">
                                 <h5 href="${repo.html_url}" class="btn btn-primary" target="_blank">View Repository</h5>
-                                </div>
+                            </div>
                             </div>
                     `;
                     reposContainer.appendChild(repoCard);
@@ -175,6 +175,16 @@
 
         document.addEventListener('DOMContentLoaded', fetchRepos);
     </script>
+
+    <!-- Hero Section 
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5>Department of Computer Science and Engineering</h5>
+            <h5>Msc: Computer Science</h5>
+        <h5 class="timeline-date">2017 – 2023, UOI, Greece</h5>
+                    </div>
+    </div>
+    -->
 
     <script>
         function manageEducationContentsVisibility() {
@@ -226,30 +236,35 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
+                    <a class="nav-link" href="#education">Education</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#programming-skills">Programming Skills </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#soft-skills">Soft Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#internship">Internship</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#seminars">Seminars</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#languages">Languages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section 
-    <div class="hero-section">
-        <div class="container">
-            <h1 class="display-4">Welcome to My Portfolio</h1>
-            <p class="lead">I am Vasileios Stergiou, a passionate developer.</p>
-            <a href="#" class="btn btn-primary btn-lg">Learn More</a>
-        </div>
-    </div>
-    -->
-
     <div class="container my-4">
-        <div class="row">
+        <div class="row" id="about">
             <div class="col-md-4">
                 <h1>About Me</h1>
                 <p>As a person, i am open to new ideas and
@@ -287,8 +302,9 @@
                             </div>
                         </div>
     Education Timeline Section -->
+
     <div class="container mb-4">
-        <h1 class="text-center">Education</h1>
+        <h1 class="text-center" id="education">Education</h1>
         <div class="text-center">
         <button class="btn btn-primary" id="ed-btn" onClick="manageEducationContentsVisibility()">Hide Education Process</button>
         </div>
@@ -323,7 +339,7 @@
     <hr>
 
     <!-- About Section -->
-    <div class="content">
+    <div class="content" id="github">
         <div class="container my-1">
             <h1 class="text-center">Github Projects</h1>
             <div class="text-center">
@@ -438,7 +454,7 @@
 
     <!-- Skills Section -->
     <div class="text-center">
-        <div class="container my-4" id ="programming-skills">
+        <div class="container my-4" id ="soft-skills">
             <h1 class="text-center">Soft Skills</h1>
             <div class="soft-skills-section">
                 <div class="skill">
@@ -470,7 +486,7 @@
 
     <!-- Skills Section -->
     <div class="text-center">
-        <div class="container my-4" id ="programming-skills">
+        <div class="container my-4" id ="internship">
             <h1 class="text-center">Internship</h1>
             <div class="internship">
                 <h3>Two - month internship at NIKI LTD Company</h3>
@@ -508,7 +524,7 @@
     </div>
 
     <hr>
-    <div class="text-center">
+    <div class="text-center" id="seminars">
         <div class="container my-4" id ="programming-skills">
             <h1 class="text-center">Seminars</h1>
             <div class="internship">
@@ -520,7 +536,7 @@
     <hr>
     <!-- Skills Section -->
     <div class="text-center">
-        <div class="container my-4" id ="programming-skills">
+        <div class="container my-4" id ="languages">
             <h1 class="text-center"></i>Languages</h1>
             <div class="skills-section">
                 <div class="skill">
@@ -573,7 +589,7 @@
     <hr>
     
     <!-- Contact Section -->
-    <div class="container my-5">
+    <div class="container my-5" id="contact">
         <h2 class="text-center">Contact Me</h2>
         <form>
             <div class="form-group">
