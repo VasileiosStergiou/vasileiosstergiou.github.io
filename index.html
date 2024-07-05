@@ -20,8 +20,15 @@
             justify-content: center;
         }
 
+        html {
+            scroll-behavior:smooth;
+        }
+
         .navbar-section {
             background-color: #376dab; /* Bootstrap's primary blue color */
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         body{
@@ -40,6 +47,7 @@
         }
 
         .education-process .card-body{
+            display:block;
             background-color: rgb(12, 32, 38);
             border-style:groove;
             border-color: rgb(103, 38, 129);
@@ -87,9 +95,6 @@
             border:double;
             color: rgb(36, 126, 60);
         }
-        .education-process{
-            display:block;
-        }
 
         .skills-section {
             margin: 20px 0;
@@ -128,6 +133,13 @@
             display: block;
         }
 
+        .title{
+            text-decoration: underline;
+        }
+
+        .navbar-brand{
+            text-align:right;
+        }
         
     </style>
 
@@ -153,6 +165,7 @@
                             .card-body{
                                 background-color: rgb(12, 32, 38);
                                 border-style:groove;
+                                border-color: rgb(103, 38, 129);
                             }
                             .btn-primary{
                                 background: green;
@@ -230,7 +243,7 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-section">
-        <a class="navbar-brand" href="#">Vasileios Stergiou </a>
+        <a class="navbar-brand" href="#">Vasileios Stergiou</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -242,6 +255,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="CV.pdf" target="_blank" download>CV</a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="#education">Education</a>
                 </li>
@@ -270,7 +288,7 @@
     <div class="container my-4">
         <div class="row" id="about">
             <div class="col-md-4">
-                <h1>About Me</h1>
+                <h1>About</h1>
                 <p>As a person, i am open to new ideas and
                     communicating with my colleagues in a
                     variety of topics, both in work-related topics
@@ -287,7 +305,8 @@
                     i am asked to be acquainted with.
                     <br> Capable of managing my personal schedule
                     and tight deadlines, in order to deliver the
-                    tasks on time.</p>
+                    tasks on time.
+                </p>
             </div>
             <div class="col-md-6">
                 <img src="vasilis.jpg" alt="Vasileios Stergiou" class="img-fluid profile-image">
@@ -371,6 +390,23 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
+                    <div class="text-left">
+                        <li>High level of experience and adaptability on software development using the Python programming language, mainly focused
+                            on problem solving and algorithm development and acquainted with most of its available libraries, including
+                            Pandas, OpenCV, Numpy, Tensorflow, PyTorch, Tkinter etc.
+                        </li>
+                        <br>
+                        <li>
+                            First-hand working experience on data processing,analysis and filtering during the two-month internship at NIKI LTD. Company,
+                            ,while getting acquainted with the PyCharm Development Editor. 
+                        </li>
+                        <br>
+                        <li>
+                            Implementation of my Thesis on the field of Image Processing and Artificial Intelligence (AI)
+                            using the PyTorch, Tensorflow and OpenCV libraries on objectives centered around Image Denoising and
+                            Image Filtering with NxN 2D filters.
+                        </li>
+                    </div>
                 </div>
 
                 <div class="skill">
@@ -381,6 +417,15 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
+                    </div>
+                    <div class="text-left">
+                        <li>High academic level of Java experience, mainly focused in back-end software
+                           development, algorithm implementations and problem solving using the Java language.  
+                        </li>
+                        <br>
+                        <li>
+                            Front-end development using the Java Swing and Java FX frameworks for academic projects
+                        </li>
                     </div>
                 </div>
 
@@ -496,7 +541,7 @@
                 <h3>Two - month internship at NIKI LTD Company</h3>
                 <br>
                 <div class="internship-content">
-                    <p>Data analysis and filtering on CSV file files containg the workhours and tasks per current employee,
+                    <p>Data analysis and filtering on CSV files containg the workhours and tasks per current employee,
                        for the purpose of automating the extraction of the total workhours, tasks
                        and projects the employees have worked on. 
                        The considered criteria in implementing the described automation are the following:
@@ -515,7 +560,7 @@
                             </li>
                             <br>
                             <li>The input months and years that the projects have been implemented, in order for the previously mentioned
-                                types of filtering to be applied on specif monts and years
+                                types of filtering to be applied on specified months and years
                             </li>
                         </ol>
                     </div>
