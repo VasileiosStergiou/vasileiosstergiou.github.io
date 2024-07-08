@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vasileios Stergiou Portfolio</title>
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <style>
         .hero-section {
             background: url('bg1.jpg') no-repeat center center;
@@ -480,7 +482,7 @@
                     </li>
                     <br>
                     <li>Entry level understanding of Kernel-level system calls on Minix operating system,
-                        for the purpose of implemting a backup journal on the structures of the FAT file system and 
+                        for the purpose of implementing a backup journal on the structures of the FAT file system and 
                         minimizing data loss, in case of a forced system shutdown.
                     </li>
                 </div>
@@ -611,16 +613,6 @@
     </div>
 
     <hr>
-    <div class="text-center" id="seminars">
-        <div class="container my-4" id ="programming-skills">
-            <h1 class="text-center">Seminars</h1>
-            <div class="internship">
-                <li> Web Analytics: Using Data to Help a Business Grow (2018) </li>
-            </div>
-        </div>
-    </div>
-
-    <hr>
     <!-- Skills Section -->
     <div class="text-center">
         <div class="container my-4" id ="languages">
@@ -673,6 +665,17 @@
             </div>
         </div>
     </div>
+
+    <hr>
+    <div class="text-center" id="seminars">
+        <div class="container my-4" id ="programming-skills">
+            <h1 class="text-center">Seminars</h1>
+            <div class="internship">
+                <li> Web Analytics: Using Data to Help a Business Grow (2018) </li>
+            </div>
+        </div>
+    </div>
+
     <hr>
     
     <!-- Contact Section -->
@@ -701,39 +704,15 @@
 
     <!-- Footer -->
     <footer class="footer-section text-white text-center py-3">
-        <p>&copy; 2024 Vasileios Stergiou. All Rights Reserved.</p>
-        <p>Anatoli,Ioannina,Greece</p>
         <div class="info">
-            <span>📞6943214343</span>
-            <span id="currentDate"><span id="datePlaceholder"></span>
-            <span id="currentTime"><span id="currentTime"></span>
+            <a>Anatoli,Ioannina,Greece</a>
+            <a>📞6943214343</a>
+            <a href="https://github.com/VasileiosStergiou" target="_blank" class="text-white mx-2"><i class="fab fa-github"></i></a>
+            <a href="https://facebook.com/basilis_stergiou" target="_blank" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/basilis_stergiou" target="_blank" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white mx-2"><span class="flag-icon flag-icon-gr"></span></a>
+            <a href="#" class="text-white mx-2"><span class="flag-icon flag-icon-us"></span></a>
         </div>
-            <script>
-                // Function to format the date as "Month day, Year"
-                function formatDate(date) {
-                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-                    return date.toLocaleDateString('en-US', options);
-                }
-                function formatTime(date) {
-                    const hours = date.getHours().toString().padStart(2, '0'); // Ensure two digits for hours
-                    const minutes = date.getMinutes().toString().padStart(2, '0'); // Ensure two digits for minutes
-                    const seconds = date.getSeconds().toString().padStart(2, '0'); // Ensure two digits for seconds
-                    return `${hours}:${minutes}:${seconds}`;
-                }
-        
-                // Function to update the displayed time
-                function updateCurrentTime() {
-                    const currentTime = new Date();
-                    document.getElementById('currentTime').textContent = formatTime(currentTime);
-                }
-
-                // Update the time initially
-                updateCurrentTime();
-                // Update the time every second (1000 milliseconds)
-                setInterval(updateCurrentTime, 1000);
-                var currentDate = new Date();
-                document.getElementById('datePlaceholder').textContent = formatDate(currentDate);
-            </script>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
