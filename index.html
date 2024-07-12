@@ -146,6 +146,14 @@
         .navbar-brand{
             text-align:justify;
         }
+
+        .dropdown-menu{
+            background-image: linear-gradient(rgb(90, 172, 186),rgb(40, 87, 100));
+        }
+        .dropdown-item:hover{
+            border-radius: 70px;
+            background-color: #dec944;
+        }
     </style>
 
     <script>
@@ -273,12 +281,15 @@
                     <a class="nav-link" href="#github">Github Projects </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#programming-skills">Programming Skills </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#soft-skills">Soft Skills</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="skillsDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Skills
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="skillsDropdown">
+                        <a class="dropdown-item" href="#programming-skills">Programming Skills</a>
+                        <a class="dropdown-item" href="#soft-skills">Soft Skills</a>
+                    </div>
                 </li>
 
                 <li class="nav-item">
